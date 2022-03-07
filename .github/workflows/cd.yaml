@@ -17,10 +17,7 @@ jobs:
            uses: crazy-max/ghaction-docker-meta@v1
            with:
               images: unitynts/appwork_web
-              tag-sha: true
-
-        
-
+              tag-sha: true       
 
          - name: QEMU
            uses: docker/setup-qemu-action@/v1
