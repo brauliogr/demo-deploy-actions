@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy EKS
 on:
     push:
         branches: [main]
