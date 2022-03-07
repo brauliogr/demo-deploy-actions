@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: appwork-web
+  namespace: appwork
+spec:
+  rules:
+  - host: appwork-web
+    http:
+      paths:
+      - backend:
+          service:
+            name: appwork-web
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
