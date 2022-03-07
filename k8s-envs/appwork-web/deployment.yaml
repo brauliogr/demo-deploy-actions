@@ -18,7 +18,7 @@ spec:
         env:
         - name: MONGO_URL
           value: mongodb://mongo:27017/
-        image: unitynts/appwork_web:1.0
+        image: unitynts/appwork_web
         ports:
         - containerPort: 3000
       restartPolicy: Always
