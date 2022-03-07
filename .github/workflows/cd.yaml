@@ -1,0 +1,24 @@
+name: Deploy
+on:
+    push:
+        branches: [main]
+        tags:
+            - 'v*.*.*'
+jobs:
+    build:
+         runs-on: ubuntu-latest
+
+         steps:
+        
+         - uses: actions/checkout@v2
+
+         - name: Docker metadata
+           id: docker_meta
+           uses: crazy-max/ghaction-docker-meta@v1
+           with:
+              images: unitynts/appwork_web
+              tag-sha: true
+
+              
+
+
